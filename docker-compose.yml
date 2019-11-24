@@ -4,7 +4,6 @@ services:
   void-mail:
     build: .
     container_name: void-mail
-    depends_on:
     ports:
       - "3000:3000"
     env_file: 
