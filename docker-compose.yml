@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  void-mail:
+    build: .
+    container_name: void-mail
+    depends_on:
+    ports:
+      - "3000:3000"
+    env_file: 
+      - .env
+    environment:
+      DOMAIN: example.com
+      IMAP_SERVER: imap.example.com
+      IMAP_USER: username
+      IMAP_PASSWORD: mypass
